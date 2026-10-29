@@ -1,4 +1,3 @@
-# aws-vpc-peering-project
 # AWS VPC Peering Project
 
 A hands-on AWS networking project demonstrating private communication between two Virtual Private Clouds (VPCs) using VPC Peering, custom route tables, private EC2 instances, and a bastion host.
