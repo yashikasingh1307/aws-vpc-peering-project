@@ -10,41 +10,9 @@ The infrastructure was deployed in the **Asia Pacific (Sydney) — `ap-southeast
 
 ## Architecture
 
-The project consists of two custom VPCs connected through an active VPC Peering connection.
+The project uses two custom VPCs connected through an active VPC Peering connection.
 
-```text
-                       Internet
-                           |
-                    Internet Gateway
-                           |
-                  +-------------------+
-                  |       VPC A       |
-                  |   10.10.0.0/16    |
-                  |                   |
-                  |  Public Subnet    |
-                  |  10.10.1.0/24     |
-                  |  Bastion Host     |
-                  |  10.10.1.211      |
-                  |                   |
-                  |  Private Subnet   |
-                  |  10.10.2.0/24     |
-                  |  App-A            |
-                  |  10.10.2.59       |
-                  +---------+---------+
-                            |
-                     VPC Peering
-                     Connection
-                            |
-                  +---------+---------+
-                  |       VPC B       |
-                  |   10.20.0.0/16    |
-                  |                   |
-                  |  Private Subnet   |
-                  |  10.20.1.0/24     |
-                  |  App-B            |
-                  |  10.20.1.109     |
-                  +-------------------+
-```
+![AWS VPC Peering Architecture](diagrams/architecture.png)
 
 > **Note:** The diagram is a logical representation of the lab architecture. It does not represent every security rule or routing detail.
 
